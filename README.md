@@ -33,6 +33,7 @@ npx skills add Gablas/skills -a claude-code
 | Name | What it do |
 |------|------------|
 | [`learn-source`](skills/learn-source/SKILL.md) | Research external API / SaaS / webhook source. Output ground-truth `docs/sources/<source>/` bundle. Parallel docs research + live sandbox probes. |
+| [`handover`](skills/handover/SKILL.md) | Write self-contained handover prompt to `/tmp` so fresh agent (Codex, Cursor, other Claude session, subagent) picks up work with zero prior context. |
 
 ## Layout
 
