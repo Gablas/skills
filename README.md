@@ -1,68 +1,68 @@
-# gablas-skills
+# skills
 
-Personal agent skills library. Installable via [skills.sh](https://skills.sh) / `npx skills`.
+Agent skills library. Install via `npx skills` from [skills.sh](https://skills.sh).
 
 ## Install
 
 All skills:
 
 ```bash
-npx skills add Gablas/gablas-skills
+npx skills add Gablas/skills
 ```
 
 Single skill:
 
 ```bash
-npx skills add Gablas/gablas-skills --skill learn-source
+npx skills add Gablas/skills --skill learn-source
 ```
 
 Global (all projects):
 
 ```bash
-npx skills add Gablas/gablas-skills -g
+npx skills add Gablas/skills -g
 ```
 
 Specific agent:
 
 ```bash
-npx skills add Gablas/gablas-skills -a claude-code
+npx skills add Gablas/skills -a claude-code
 ```
 
 ## Skills
 
-| Name | Description |
-|------|-------------|
-| [`learn-source`](skills/learn-source/SKILL.md) | Research an external API / SaaS / webhook source, produce a ground-truth `docs/sources/<source>/` reference bundle via parallel docs research + live sandbox probes. |
+| Name | What it do |
+|------|------------|
+| [`learn-source`](skills/learn-source/SKILL.md) | Research external API / SaaS / webhook source. Output ground-truth `docs/sources/<source>/` bundle. Parallel docs research + live sandbox probes. |
 
 ## Layout
 
 ```
 skills/
-  <skill-name>/
-    SKILL.md       # name + description frontmatter + instructions
+  <name>/
+    SKILL.md
 ```
 
-Each skill directory = one skill. `SKILL.md` required. Extra files (scripts, templates) live beside it.
+One skill per dir. `SKILL.md` required. Extra files beside it.
 
-## Add a skill
+## Add skill
 
 ```bash
 mkdir -p skills/<name>
-npx skills init <name>    # scaffold SKILL.md template
+npx skills init <name>
 ```
 
-Frontmatter:
+Frontmatter required:
 
 ```yaml
 ---
 name: <name>
-description: one-line trigger/purpose
+description: one line trigger
 ---
 ```
 
 ## Cross-agent
 
-Works with Claude Code, Cursor, Codex, Gemini CLI, OpenCode, Windsurf, + 40 more. Install paths per agent resolved by `npx skills`.
+Work with Claude Code, Cursor, Codex, Gemini CLI, OpenCode, Windsurf, 40+ more. `npx skills` resolve path per agent.
 
 ## License
 
